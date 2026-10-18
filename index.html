@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Seven Moves Framework // Human-AI Strategic Dialogue Case Study</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0b0f19',
+            cardDark: '#111827',
+            cardBorder: '#1f2937',
+            neonCyan: '#06b6d4',
+            neonPink: '#ec4899',
+            neonViolet: '#8b5cf6',
+            goldAccent: '#f59e0b',
+            emeraldAccent: '#10b981'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0b0f19;
+      color: #f3f4f6;
+    }
+
+    .glass-card {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .user-question-box {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+      border-left: 4px solid #06b6d4;
+    }
+
+    .ai-advice-box {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+      border-left: 4px solid #ec4899;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #374151;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-gray-100 min-h-screen custom-scrollbar flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-md border-b border-cardBorder px-4 lg:px-8 py-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neonCyan via-neonViolet to-neonPink flex items-center justify-center font-black text-xl text-black shadow-lg shadow-neonCyan/20">
+          7M
+        </div>
+        <div>
+          <h1 class="font-extrabold text-lg tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-neonViolet to-neonPink">
+            THE SEVEN MOVES FRAMEWORK
+          </h1>
+          <p class="text-xs text-gray-400 font-medium">Applied Academic Case Study: Online Fitness Business Strategy</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3">
+        <span class="text-xs px-3 py-1.5 rounded-full bg-neonCyan/10 border border-neonCyan/30 text-neonCyan font-bold flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-neonCyan animate-ping"></span>
+          Academic Presentation Mode
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl w-full mx-auto px-4 sm:px-6 py-10 space-y-12 flex-1">
+
+    <!-- INTRO BANNER -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 border border-cardBorder text-center relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-neonCyan/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-neonPink/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <span class="text-xs font-bold uppercase tracking-widest text-neonCyan bg-neonCyan/10 px-3 py-1 rounded-full border border-neonCyan/20 inline-block mb-3">
+        Human-AI Collaborative Research
+      </span>
+      <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight">
+        Structured 7-Stage Strategic Dialogue
+      </h2>
+      <p class="mt-3 text-sm md:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        This document showcases the sequential execution of <strong class="text-gray-200">The Seven Moves Framework</strong>. By transitioning from high-stakes questioning to predictive horizon scanning, hypothesis calibration, and master prompt synthesis, this dialogue demonstrates how AI operates as an advanced strategic thinking partner.
+      </p>
+
+      <!-- NAVIGATION PILLS -->
+      <div class="mt-8 flex flex-wrap justify-center gap-2 text-xs font-bold">
+        <a href="#move-1" class="px-3 py-1.5 rounded-lg bg-cardBorder text-gray-300 hover:text-neonCyan hover:bg-gray-800 transition">Move 1</a>
+        <a href="#move-2" class="px-3 py-1.5 rounded-lg bg-cardBorder text-gray-300 hover:text-neonCyan hover:bg-gray-800 transition">Move 2</a>
+        <a href="#move-3" class="px-3 py-1.5 rounded-lg bg-cardBorder text-gray-300 hover:text-neonCyan hover:bg-gray-800 transition">Move 3</a>
+        <a href="#move-4" class="px-3 py-1.5 rounded-lg bg-cardBorder text-gray-300 hover:text-neonCyan hover:bg-gray-800 transition">Move 4</a>
+        <a href="#move-5" class="px-3 py-1.5 rounded-lg bg-cardBorder text-gray-300 hover:text-neonCyan hover:bg-gray-800 transition">Move 5</a>
+        <a href="#move-6" class="px-3 py-1.5 rounded-lg bg-cardBorder text-gray-300 hover:text-neonCyan hover:bg-gray-800 transition">Move 6</a>
+        <a href="#move-7" class="px-3 py-1.5 rounded-lg bg-cardBorder text-gray-300 hover:text-neonCyan hover:bg-gray-800 transition">Move 7</a>
+      </div>
+    </section>
+
+    <!-- DIALOGUE STAGES -->
+    <div class="space-y-12">
+
+      <!-- MOVE 1 -->
+      <section id="move-1" class="glass-card rounded-2xl p-6 sm:p-8 space-y-6 border border-cardBorder">
+        <div class="flex items-center justify-between border-b border-cardBorder pb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-neonCyan/20 text-neonCyan font-black text-sm flex items-center justify-center border border-neonCyan/30">1</span>
+            <h3 class="text-xl font-black text-white">Move 1: Ask a Real Question (High Stakes)</h3>
+          </div>
+          <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:inline">Baseline Inquiry</span>
+        </div>
+
+        <!-- USER QUESTION -->
+        <div class="user-question-box p-5 rounded-xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonCyan uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-user-graduate"></i> MY QUESTION TO AI
+            </span>
+            <span class="text-[11px] text-gray-400 font-mono">Polished Academic Speech</span>
+          </div>
+          <p class="text-sm font-medium text-gray-200 italic leading-relaxed">
+            "Can online fitness coaching operate as a fully viable, highly profitable business model today, allowing an individual to earn a complete full-time living exclusively online without relying on physical gym facilities?"
+          </p>
+        </div>
+
+        <!-- AI ANSWER -->
+        <div class="ai-advice-box p-5 rounded-xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonPink uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-robot"></i> AI STRATEGIC ADVICE & RESPONSE
+            </span>
+            <span class="text-[11px] text-emeraldAccent font-bold">Viability: High</span>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            <strong>Yes, online coaching is exceptionally viable and structurally superior to traditional gym models.</strong> By replacing geographic limitations and low hourly wages with high-ticket recurring subscriptions ($200–$500/month), an individual coach requires only <strong class="text-white">20 to 30 active clients</strong> to generate a $60,000–$120,000 annual net income.
+          </p>
+          <div class="bg-obsidian/60 p-3 rounded-lg text-xs text-gray-400 border border-cardBorder space-y-1">
+            <p><strong class="text-neonCyan">Key Drivers:</strong> ~90% profit margins, zero facility lease overhead, scalability via digital client management tools.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOVE 2 -->
+      <section id="move-2" class="glass-card rounded-2xl p-6 sm:p-8 space-y-6 border border-cardBorder">
+        <div class="flex items-center justify-between border-b border-cardBorder pb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-neonViolet/20 text-neonViolet font-black text-sm flex items-center justify-center border border-neonViolet/30">2</span>
+            <h3 class="text-xl font-black text-white">Move 2: Drill Deeper (Evidence & 5–10 Year Time Horizon)</h3>
+          </div>
+          <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:inline">Horizon Scanning</span>
+        </div>
+
+        <!-- USER QUESTION -->
+        <div class="user-question-box p-5 rounded-xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonCyan uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-user-graduate"></i> MY QUESTION TO AI
+            </span>
+            <span class="text-[11px] text-gray-400 font-mono">Polished Academic Speech</span>
+          </div>
+          <p class="text-sm font-medium text-gray-200 italic leading-relaxed">
+            "Looking ahead over a 5 to 10-year horizon as AI and automated digital tools advance, will human coaches remain essential, or will AI tools completely replace human coaches in running online fitness businesses?"
+          </p>
+        </div>
+
+        <!-- AI ANSWER -->
+        <div class="ai-advice-box p-5 rounded-xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonPink uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-robot"></i> AI STRATEGIC ADVICE & RESPONSE
+            </span>
+            <span class="text-[11px] text-goldAccent font-bold">Shift: Hybrid Automation</span>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            <strong>AI will commoditize generic workout planning, but it will NOT replace high-ticket human accountability.</strong> Over the next decade, standalone automated fitness apps will drop to near-zero pricing. However, human coaches who integrate AI as a backend copilot will thrive by focusing on emotional intelligence, psychological motivation, and personal brand connection.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-400 pt-1">
+            <div class="bg-obsidian/60 p-2.5 rounded-lg border border-cardBorder">
+              <strong class="text-rose-400 block">Commoditized by AI:</strong> Routine workout math, generic macro counting, automated calendar scheduling.
+            </div>
+            <div class="bg-obsidian/60 p-2.5 rounded-lg border border-cardBorder">
+              <strong class="text-emeraldAccent block">Human Value Premium:</strong> Behavioral empathy, trauma-informed coaching, trust, direct client relationships.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOVE 3 -->
+      <section id="move-3" class="glass-card rounded-2xl p-6 sm:p-8 space-y-6 border border-cardBorder">
+        <div class="flex items-center justify-between border-b border-cardBorder pb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-neonPink/20 text-neonPink font-black text-sm flex items-center justify-center border border-neonPink/30">3</span>
+            <h3 class="text-xl font-black text-white">Move 3: Ask the AI for the Questions (Deep Angles)</h3>
+          </div>
+          <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:inline">Exploratory Vectoring</span>
+        </div>
+
+        <!-- USER QUESTION -->
+        <div class="user-question-box p-5 rounded-xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonCyan uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-user-graduate"></i> MY QUESTION TO AI
+            </span>
+            <span class="text-[11px] text-gray-400 font-mono">Polished Academic Speech</span>
+          </div>
+          <p class="text-sm font-medium text-gray-200 italic leading-relaxed">
+            "If you were analyzing this business model from every strategic angle—from pricing structures to personal branding—what critical questions would you explore next to reveal the hidden friction points?"
+          </p>
+        </div>
+
+        <!-- AI ANSWER -->
+        <div class="ai-advice-box p-5 rounded-xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonPink uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-robot"></i> AI STRATEGIC ADVICE & RESPONSE
+            </span>
+            <span class="text-[11px] text-neonCyan font-bold">3 Strategic Vectors</span>
+          </div>
+          <div class="space-y-2 text-xs text-gray-300">
+            <p><strong class="text-neonCyan">1. The Retention Vector:</strong> "What exact client retention mechanisms prevent subscriber churn beyond the initial 90-day transformation window?"</p>
+            <p><strong class="text-neonViolet">2. The Positioning Vector:</strong> "How does an independent coach stand out against low-cost algorithmic apps ($10/mo) while charging premium pricing ($300/mo)?"</p>
+            <p><strong class="text-goldAccent">3. The Operations Vector:</strong> "What specific tech architecture allows a solo coach to manage 50+ clients without experiencing cognitive burnout?"</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOVE 4 -->
+      <section id="move-4" class="glass-card rounded-2xl p-6 sm:p-8 space-y-6 border border-cardBorder">
+        <div class="flex items-center justify-between border-b border-cardBorder pb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-goldAccent/20 text-goldAccent font-black text-sm flex items-center justify-center border border-goldAccent/30">4</span>
+            <h3 class="text-xl font-black text-white">Move 4: Surface Working Hypotheses</h3>
+          </div>
+          <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:inline">Theoretical Framework</span>
+        </div>
+
+        <!-- USER QUESTION -->
+        <div class="user-question-box p-5 rounded-xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonCyan uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-user-graduate"></i> MY QUESTION TO AI
+            </span>
+            <span class="text-[11px] text-gray-400 font-mono">Polished Academic Speech</span>
+          </div>
+          <p class="text-sm font-medium text-gray-200 italic leading-relaxed">
+            "Based on our strategic exploration so far, what core working hypotheses can we synthesize regarding sustainable online coaching success?"
+          </p>
+        </div>
+
+        <!-- AI ANSWER -->
+        <div class="ai-advice-box p-5 rounded-xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonPink uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-robot"></i> AI STRATEGIC ADVICE & RESPONSE
+            </span>
+            <span class="text-[11px] text-emeraldAccent font-bold">3 Core Hypotheses</span>
+          </div>
+          
+          <div class="space-y-3 text-xs">
+            <div class="bg-obsidian/70 p-3 rounded-lg border border-cardBorder">
+              <span class="font-bold text-neonCyan block mb-1">Hypothesis A: Outcome-Based Pricing Model</span>
+              <p class="text-gray-300">Coaches who shift from trading hourly time to selling guaranteed lifestyle transformations achieve 3x higher lifetime customer value (LTV).</p>
+            </div>
+            <div class="bg-obsidian/70 p-3 rounded-lg border border-cardBorder">
+              <span class="font-bold text-neonViolet block mb-1">Hypothesis B: AI as Administrative Multiplier</span>
+              <p class="text-gray-300">Using AI tools for routine compliance tracking frees up 70% of coach operational time, directly enabling business scaling without quality degradation.</p>
+            </div>
+            <div class="bg-obsidian/70 p-3 rounded-lg border border-cardBorder">
+              <span class="font-bold text-goldAccent block mb-1">Hypothesis C: The Authentic Proof Asset</span>
+              <p class="text-gray-300">Documented real-world personal training transformation videos and client case studies create an unshakeable moat against commoditized software competition.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOVE 5 -->
+      <section id="move-5" class="glass-card rounded-2xl p-6 sm:p-8 space-y-6 border border-cardBorder">
+        <div class="flex items-center justify-between border-b border-cardBorder pb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-emeraldAccent/20 text-emeraldAccent font-black text-sm flex items-center justify-center border border-emeraldAccent/30">5</span>
+            <h3 class="text-xl font-black text-white">Move 5: Force Calibration & Confidence Ratings</h3>
+          </div>
+          <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:inline">Quantitative Assessment</span>
+        </div>
+
+        <!-- USER QUESTION -->
+        <div class="user-question-box p-5 rounded-xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonCyan uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-user-graduate"></i> MY QUESTION TO AI
+            </span>
+            <span class="text-[11px] text-gray-400 font-mono">Polished Academic Speech</span>
+          </div>
+          <p class="text-sm font-medium text-gray-200 italic leading-relaxed">
+            "Now force calibration on those hypotheses: assign explicit confidence levels to each, state the core assumptions, and identify key failure risks."
+          </p>
+        </div>
+
+        <!-- AI ANSWER -->
+        <div class="ai-advice-box p-5 rounded-xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonPink uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-robot"></i> AI STRATEGIC ADVICE & RESPONSE
+            </span>
+            <span class="text-[11px] text-emeraldAccent font-bold">Calibration Matrix</span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-cardBorder text-gray-400 bg-obsidian/40">
+                  <th class="p-2.5">Hypothesis</th>
+                  <th class="p-2.5">Confidence</th>
+                  <th class="p-2.5">Underlying Assumption</th>
+                  <th class="p-2.5">Failure Risk</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-cardBorder text-gray-300">
+                <tr>
+                  <td class="p-2.5 font-bold text-neonCyan">A: Outcome Pricing</td>
+                  <td class="p-2.5"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">HIGH (90%)</span></td>
+                  <td class="p-2.5">Clients value clarity over physical gym access.</td>
+                  <td class="p-2.5 text-rose-400">Poor onboarding leads to early dropouts.</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-bold text-neonViolet">B: AI Multiplier</td>
+                  <td class="p-2.5"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">HIGH (85%)</span></td>
+                  <td class="p-2.5">Coach retains personal touch despite automation.</td>
+                  <td class="p-2.5 text-rose-400">Over-automation feels robotic to clients.</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-bold text-goldAccent">C: Proof Asset</td>
+                  <td class="p-2.5"><span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold">MED-HIGH (75%)</span></td>
+                  <td class="p-2.5">Audience can distinguish real effort from marketing hype.</td>
+                  <td class="p-2.5 text-rose-400">Market saturation of fake client transformation claims.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOVE 6 -->
+      <section id="move-6" class="glass-card rounded-2xl p-6 sm:p-8 space-y-6 border border-cardBorder">
+        <div class="flex items-center justify-between border-b border-cardBorder pb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-neonCyan/20 text-neonCyan font-black text-sm flex items-center justify-center border border-neonCyan/30">6</span>
+            <h3 class="text-xl font-black text-white">Move 6: Compress to Reusable Master Prompt</h3>
+          </div>
+          <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:inline">Prompt Synthesis</span>
+        </div>
+
+        <!-- USER QUESTION -->
+        <div class="user-question-box p-5 rounded-xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonCyan uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-user-graduate"></i> MY QUESTION TO AI
+            </span>
+            <span class="text-[11px] text-gray-400 font-mono">Polished Academic Speech</span>
+          </div>
+          <p class="text-sm font-medium text-gray-200 italic leading-relaxed">
+            "Compress our findings into a single, highly structured master prompt that can be reused across any AI model to execute this deep strategy analysis for future business cases."
+          </p>
+        </div>
+
+        <!-- AI ANSWER -->
+        <div class="ai-advice-box p-5 rounded-xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonPink uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-robot"></i> AI STRATEGIC ADVICE & RESPONSE
+            </span>
+            <button onclick="copyMasterPrompt()" class="text-xs text-neonCyan hover:underline font-mono flex items-center gap-1">
+              <i class="fa-regular fa-copy"></i> Copy Prompt
+            </button>
+          </div>
+
+          <div class="bg-obsidian border border-cardBorder p-4 rounded-xl text-xs font-mono text-gray-300 space-y-2 leading-relaxed" id="master-prompt-text">
+            <p class="text-neonCyan">// REUSABLE MASTER PROMPT FOR DEEP BUSINESS ANALYSIS</p>
+            <p>"Act as an elite business strategist and technical co-founder. Conduct an exhaustive feasibility analysis for launching an online coaching business in [Niche Industry]. Address 4 core dimensions: 1) Financial mechanics & high-ticket pricing models required to replace a full-time income; 2) The 5-to-10 year AI disruption horizon, specifying what gets commoditized vs. what retains premium human value; 3) A operational tech stack leveraging AI for client check-ins; and 4) A risk-calibrated launch roadmap with specific failure mitigation strategies."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOVE 7 -->
+      <section id="move-7" class="glass-card rounded-2xl p-6 sm:p-8 space-y-6 border border-cardBorder relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-goldAccent/10 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div class="flex items-center justify-between border-b border-cardBorder pb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-goldAccent/20 text-goldAccent font-black text-sm flex items-center justify-center border border-goldAccent/30">7</span>
+            <h3 class="text-xl font-black text-white">Move 7: Retrospective & Meta-Learning</h3>
+          </div>
+          <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:inline">Meta-Analysis</span>
+        </div>
+
+        <!-- USER QUESTION -->
+        <div class="user-question-box p-5 rounded-xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonCyan uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-user-graduate"></i> MY QUESTION TO AI
+            </span>
+            <span class="text-[11px] text-gray-400 font-mono">Polished Academic Speech</span>
+          </div>
+          <p class="text-sm font-medium text-gray-200 italic leading-relaxed">
+            "What master prompt should I have used from the very start to ask this question? Looking back over our multi-turn exploration, what would have been the single most efficient, structured question to ask from the outset, and what are the top 3 sequential follow-up questions to ask next?"
+          </p>
+        </div>
+
+        <!-- AI ANSWER -->
+        <div class="ai-advice-box p-5 rounded-xl space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-neonPink uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-robot"></i> AI STRATEGIC ADVICE & RESPONSE
+            </span>
+            <span class="text-[11px] text-goldAccent font-bold">Retrospective Blueprint</span>
+          </div>
+
+          <p class="text-xs text-gray-300 leading-relaxed">
+            While exploring step-by-step is crucial for learning, you could have collapsed Moves 1 through 5 into this single <strong>Master Starting Prompt</strong>:
+          </p>
+
+          <!-- IDEAL STARTING PROMPT -->
+          <div class="bg-obsidian border border-goldAccent/40 p-4 rounded-xl text-xs font-mono text-gray-200 space-y-2">
+            <p class="text-goldAccent font-bold uppercase">// THE ULTIMATE STARTING PROMPT</p>
+            <p class="leading-relaxed">
+              "Evaluate the full business viability of operating an independent online fitness coaching business to generate $100k/year. Provide: 1) Financial target ratios; 2) A 5-10 year AI risk analysis; 3) Three testable working hypotheses regarding client retention; and 4) A calibrated confidence matrix detailing assumptions vs. failure risks."
+            </p>
+          </div>
+
+          <!-- TOP 3 SEQUENTIAL QUESTIONS TO ASK NEXT -->
+          <div class="space-y-2 pt-2">
+            <p class="text-xs font-bold text-white uppercase tracking-wider">Top 3 Sequential Questions to Ask Next:</p>
+            <div class="space-y-2 text-xs">
+              <div class="p-3 bg-obsidian/60 rounded-lg border border-cardBorder flex items-start space-x-2">
+                <span class="text-neonCyan font-bold">Q1:</span>
+                <p class="text-gray-300"><strong class="text-white">The Pre-Mortem Test:</strong> "Assume 90 days have passed and this online gym launch has failed. What were the exact operational failure points?"</p>
+              </div>
+              <div class="p-3 bg-obsidian/60 rounded-lg border border-cardBorder flex items-start space-x-2">
+                <span class="text-neonViolet font-bold">Q2:</span>
+                <p class="text-gray-300"><strong class="text-white">Tech Integration:</strong> "What exact no-code workflow bridges client workout tracking directly into an automated retention dashboard?"</p>
+              </div>
+              <div class="p-3 bg-obsidian/60 rounded-lg border border-cardBorder flex items-start space-x-2">
+                <span class="text-goldAccent font-bold">Q3:</span>
+                <p class="text-gray-300"><strong class="text-white">Cross-Model Stress Test:</strong> "How would an opposing strategist criticize our high-ticket pricing assumption?"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-cardBorder bg-obsidian py-8 px-4 text-center text-xs text-gray-500 mt-12">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Human-AI Collaborative Methodology &bull; Seven Moves Case Study</p>
+      <div class="flex space-x-4 text-gray-400">
+        <span>Academic Presentation Ready</span>
+        <span>&bull;</span>
+        <span>Flawless English Dialogues</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function copyMasterPrompt() {
+      const text = document.getElementById('master-prompt-text').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Master Prompt copied to clipboard!');
+      });
+    }
+  </script>
+</body>
+</html>
